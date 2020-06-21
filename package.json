@@ -6,8 +6,8 @@
     "scripts": {
         "start": "node index.js",
         "deploy:now": "now -E",
-        "predeploy:heroku": "git add . \n git commit -m 'restart'",
-        "deploy:heroku": "git push heroku master \n "
+        "predeploy": "git add . \n git commit -m 'restart'",
+        "deploy": "git push heroku master \n "
     },
     "dependencies": {
         "console.lol": "0.1.2",
