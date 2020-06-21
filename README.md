@@ -374,16 +374,16 @@ Then `heroku login` from the terminal and you will be prompted to enter your ema
 
 Then `heroku create`, it'll create an heroku app for you with a random name like catfish-streams
 
-To move ahead run the following:
+To move ahead create a new git repository by running:
 
 ```shell
 git init
+heroku git:remote -a catfish-streams //replace the catfish-streams with your app name
 git add . // dot means it should add all new files
-git commit -m "Add any message here about this commit"
-git:remote heroku catfish-streams //replace the catfish-streams with your app name
+git commit -m "Initial Deploy"
 ```
 
-If you take a look at the `package.json` file in the `"scripts"` section you see there is one for `"deploy:heroku"` this is the command to deploy the bot to `now`, so from the terminal:
+If you take a look at the `package.json` file in the `"scripts"` section you see there is one for `"deploy:heroku"` this is the command to deploy the bot to `heroku`, so from the terminal:
 
 ```shell
 npm run deploy:heroku
