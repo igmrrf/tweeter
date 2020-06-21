@@ -5,8 +5,8 @@
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
-        "deploy now": "now -E",
-        "deploy heroku": "git push heroku master"
+        "deploy:now": "now -E",
+        "deploy:heroku": "git push heroku master"
     },
     "dependencies": {
         "console.lol": "0.1.2",

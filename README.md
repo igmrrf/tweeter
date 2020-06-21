@@ -197,7 +197,7 @@ Then `now` from the terminal and you will be prompted to enter your email, you w
 If you take a look at the `package.json` file in the `"scripts"` section you see there is one for `"deploy"` this is the command to deploy the bot to `now`, so from the terminal:
 
 ```shell
-npm run deploy
+npm run deploy:now
 ```
 
 This will use all our environment variables we defined within our `.env` file for use on the now servers.
