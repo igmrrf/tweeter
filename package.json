@@ -1,35 +1,36 @@
 {
-    "name": "tweeter",
-    "version": "1.0.0",
-    "description": "A twitter bot!",
-    "main": "index.js",
-    "scripts": {
-        "start": "node index.js",
-        "deploy:now": "now -E",
-        "deploy:heroku": "git push heroku master"
-    },
-    "dependencies": {
-        "console.lol": "0.1.2",
-        "dotenv": "8.2.0",
-        "twit": "2.2.11",
-        "unique-random-array": "2.0.0"
-    },
-    "now": {
-        "alias": "tweeter"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/tweeter/tweeter.git"
-    },
-    "keywords": [
-        "twitter",
-        "bot",
-        "retweet"
-    ],
-    "author": "The Lazy Dev Otaku <tldo@gmail.com> (https://blog.igmrrf.com/)",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/igmrrf/tweeter/issues"
-    },
-    "homepage": "https://github.com/igmrrf/tweeter#readme"
+  "name": "tweeter",
+  "version": "1.0.0",
+  "description": "A twitter bot!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "deploy:now": "now -E",
+    "deploy:heroku": "git push heroku master",
+    "start:dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "console.lol": "0.1.2",
+    "dotenv": "8.2.0",
+    "twit": "2.2.11",
+    "unique-random-array": "2.0.0"
+  },
+  "now": {
+    "alias": "tweeter"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tweeter/tweeter.git"
+  },
+  "keywords": [
+    "twitter",
+    "bot",
+    "retweet"
+  ],
+  "author": "The Lazy Dev Otaku <tldo@gmail.com> (https://blog.igmrrf.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igmrrf/tweeter/issues"
+  },
+  "homepage": "https://github.com/igmrrf/tweeter#readme"
 }
