@@ -1,20 +1,18 @@
 // listen on port so now.sh likes it
-const { createServer } = require("http");
-
+import { createServer } from "node:http";
 
 // bot features
 // due to the Twitter ToS automation of likes
 // is no longer allowed, so:
-const Twit = require("twit");
-const config = require("./src/config");
-require("console.lol");
+import Twit from "twit";
+import config from "./config";
 
 const bot = new Twit(config.twitterKeys);
 
-const retweet = require("./src/api/retweet");
-const reply = require("./src/api/reply");
+import retweet from "./api/retweet";
+const reply = require("./api/reply");
 
-console.rofl("Bot starting...");
+console.log("Bot starting...");
 
 // retweet on keywords
 retweet();
@@ -25,11 +23,11 @@ const userStream = bot.stream("statuses/filter", { track: "@igmrrf" });
 userStream.on("follow", reply);
 
 // This will allow the bot to run on now.sh
-const server = createServer((req, res) => {
-    res.writeHead(302, {
-        Location: `https://twitter.com/${config.twitterConfig.username}`,
-    });
-    res.end();
+const server = createServer((req: Request, res: Response) => {
+	res.writeHead(302, {
+		Location: `https://twitter.com/${config.twitterConfig.username}`,
+	});
+	res.end();
 });
 const PORT = process.env.PORT || 3000;
 
